@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Abdallah Hamouda | Portfolio</title>
+    
+    <!-- Google Fonts: Inter for English, Cairo for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e', // Deep Blue
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base styles */
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* Fade In Up Animation */
+        .animate-on-load {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation Delays for cascading effect */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        /* Progress Bar Animation */
+        @keyframes fillProgress {
+            from { width: 0; }
+        }
+        .progress-fill {
+            animation: fillProgress 1.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-medical-500 selection:text-white">
+
+    <header class="relative bg-medical-900 text-white overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="absolute -top-24 -right-24 w-96 h-96 text-white" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+            <svg class="absolute top-1/2 -left-24 w-72 h-72 text-medical-400" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-6 py-24 text-center z-10 animate-on-load">
+            
+            <!-- Profile Image / Icon -->
+            <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-medical-100 text-medical-900 mb-6 shadow-xl border-4 border-white/20 overflow-hidden">
+                <img src="profile.jpg" alt="Dr. Abdallah Hamouda" class="w-full h-full object-cover" onerror="this.outerHTML='<i class=\'fa-solid fa-user-doctor text-4xl\'></i>'">
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Dr. Abdallah Hamouda</h1>
+            <p class="text-xl md:text-2xl text-medical-100 font-medium mb-10">Physician Intern | Medical Data & Tech Enthusiast</p>
+            
+            <!-- Arabic About Section -->
+            <div dir="rtl" class="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl">
+                <p class="font-arabic text-lg md:text-xl leading-relaxed text-slate-50">
+                    "طبيب امتياز بجامعة الأزهر، أجمع بين المعرفة الطبية الدقيقة (خصوصاً في التحاليل والمصطلحات) والشغف بالتكنولوجيا. أعمل حالياً في إدخال البيانات الطبية المباشرة بالعيادات الخارجية. أسعى لتوظيف سرعتي في الكتابة ودقتي الطبية لتقديم تجربة تواصل وحجز احترافية وسريعة للمرضى."
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-20">
+
+        <section class="animate-on-load delay-100">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-lg bg-medical-100 flex items-center justify-center text-medical-600">
+                    <i class="fa-solid fa-briefcase text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-800">Experience</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-600 text-sm font-semibold rounded-full mb-4 border border-emerald-100">Present</span>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Medical Data Entry Specialist</h3>
+                    <p class="text-medical-600 font-medium text-sm mb-4">Outpatient Clinics, El Shorouk Hospital - Cleopatra Group</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Recording real-time medical data directly during patient-doctor consultations. Accurately inputting Patient Complaints, Diagnoses, and Medications using the <strong>ICD-10</strong> coding system. Maintaining a smooth clinic workflow through fast and error-free data entry.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <span class="inline-block px-3 py-1 bg-emerald-50 text-emerald-600 text-sm font-semibold rounded-full mb-4 border border-emerald-100">Present</span>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Physician Intern</h3>
+                    <p class="text-medical-600 font-medium text-sm mb-4">Al-Azhar University Hospitals</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Handling clinical rotations and gaining deep knowledge of medical terminology, diagnostic tests, and patient care.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- Projects -->
+            <section class="animate-on-load delay-200">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-lg bg-medical-100 flex items-center justify-center text-medical-600">
+                        <i class="fa-solid fa-rocket text-lg"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800">Projects</h2>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-6 shadow-sm border border-slate-200 relative overflow-hidden group hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-medical-500 rounded-bl-full opacity-10 group-hover:scale-110 transition-transform"></div>
+                    <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-sm font-semibold rounded-full mb-4">May 2026 – Present</span>
+                    <h3 class="text-xl font-bold text-slate-800 mb-1">Founder & Developer</h3>
+                    <p class="text-medical-600 font-medium text-sm mb-4">NextGen AI Platform</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Built a medical AI platform hosting models to assist and train medical interns. Designed the User Interface (UI) and managed database integrations. Applied Prompt Engineering to ensure models deliver accurate medical guidance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="animate-on-load delay-300">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 rounded-lg bg-medical-100 flex items-center justify-center text-medical-600">
+                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800">Education</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-start gap-4 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-full bg-medical-50 flex items-center justify-center flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-university text-medical-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-1">Bachelor of Medicine and Surgery (MBBCh)</h3>
+                        <p class="text-slate-500">Al-Azhar University</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="animate-on-load delay-400">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 rounded-lg bg-medical-100 flex items-center justify-center text-medical-600">
+                    <i class="fa-solid fa-laptop-medical text-lg"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-800">Skills</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 space-y-6">
+                
+                <!-- Skill 1 -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-slate-700">Medical Lab & Terminology Knowledge</span>
+                        <span class="text-sm font-bold text-medical-600">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2.5">
+                        <div class="bg-medical-500 h-2.5 rounded-full progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-slate-700">Systems & ICD-10 Coding</span>
+                        <span class="text-sm font-bold text-medical-600">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2.5">
+                        <div class="bg-medical-500 h-2.5 rounded-full progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-slate-700">Typing Speed & Data Entry</span>
+                        <span class="text-sm font-bold text-medical-600">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2.5">
+                        <div class="bg-medical-500 h-2.5 rounded-full progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="animate-on-load delay-500 pb-10">
+            <div class="bg-slate-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-xl relative overflow-hidden">
+                <!-- Decorative background pattern -->
+                <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                    <p class="text-slate-300 mb-8 max-w-lg mx-auto">Ready to bring medical accuracy and technical speed to your team. Reach out directly via WhatsApp or phone call.</p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="https://wa.me/201200982877" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:shadow-[#25D366]/30 hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            Chat on WhatsApp
+                        </a>
+                        
+                        <a href="tel:+201200982877" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-slate-800 hover:bg-slate-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                            <i class="fa-solid fa-phone text-medical-600"></i>
+                            Call Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center">
+        <p class="text-slate-500 text-sm">
+            &copy; 2026 Dr. Abdallah Hamouda. Built for Medical Tech & Support.
+        </p>
+    </footer>
+
+</body>
+</html>
